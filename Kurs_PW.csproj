@@ -1,0 +1,67 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>pwlogo.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\arrow_left.png" />
+    <None Remove="Assets\arrow_right.png" />
+    <None Remove="Assets\ClassMarker.png" />
+    <None Remove="Assets\Equipment.jpg" />
+    <None Remove="Assets\EquipmentScreen.png" />
+    <None Remove="Assets\GuidesScreen.jpg" />
+    <None Remove="Assets\Header.jpg" />
+    <None Remove="Assets\ImageCharacterDefault.jpg" />
+    <None Remove="Assets\LoadingScreen.jpg" />
+    <None Remove="Assets\MainScreen.jpg" />
+    <None Remove="Assets\PwMyCharacters.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="pwlogo.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\EquipmentScreen.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\arrow_left.png" />
+    <Resource Include="Assets\arrow_right.png" />
+    <Resource Include="Assets\ClassMarker.png" />
+    <Resource Include="Assets\Equipment.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\GuidesScreen.jpg" />
+    <Resource Include="Assets\Header.jpg" />
+    <Resource Include="Assets\ImageCharacterDefault.jpg" />
+    <Resource Include="Assets\LoadingScreen.jpg" />
+    <Resource Include="Assets\MainScreen.jpg" />
+    <Resource Include="Assets\PwMyCharacters.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.14" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

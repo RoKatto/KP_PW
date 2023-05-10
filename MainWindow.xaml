@@ -1,0 +1,39 @@
+﻿<Window x:Class="Kurs_PW.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kurs_PW"
+        mc:Ignorable="d"
+        Title="Perfect World" Height="720" Width="1280">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75" />
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="0"/>
+        </Grid.RowDefinitions>
+
+        <Border BorderThickness="0 0 0 1" BorderBrush="#FFFFFF">
+            <Grid Grid.Row="0">
+                <Grid.Background>
+                    <ImageBrush ImageSource="C:\Users\next\Desktop\MVS\Kurs_PW\Kurs_PW\Assets\Header.jpg" Stretch="UniformToFill"></ImageBrush>
+                </Grid.Background>
+                
+            </Grid>
+        </Border>
+        
+        <Grid Grid.Row="1">
+            <Grid.Background>
+                <ImageBrush ImageSource="C:\Users\next\Desktop\MVS\Kurs_PW\Kurs_PW\Assets\LoadingScreen.jpg" Stretch="UniformToFill"></ImageBrush>
+            </Grid.Background>
+            
+        </Grid>
+        
+                    <TextBlock Text= "{Binding ElementName=FrameMain, Path=Content.Title}" Foreground="#ffffff"
+                   Name="Txb" Style="{StaticResource Txb}" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0, 20, 0, 0"></TextBlock>
+        <Frame x:Name="FrameMain" NavigationUIVisibility="Hidden" Grid.Row="1" Grid.ColumnSpan="2"></Frame>
+
+                
+    </Grid>
+    
+</Window>

@@ -1,0 +1,271 @@
+﻿<Page x:Class="Kurs_PW.Pages.MoreDetailedPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Kurs_PW.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="860" d:DesignWidth="1280"
+      Title="Персонаж" Loaded="Page_Loaded">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush x:Name="ImageG" ImageSource="\Assets\Equipment.jpg" Stretch="UniformToFill">
+            </ImageBrush>
+        </Grid.Background>
+
+        <Border BorderBrush="Azure" BorderThickness="2, 2, 2, 2" Width="500" Height="600" HorizontalAlignment="Center">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="500" Height="600">
+                    <StackPanel.Background>
+                        <SolidColorBrush Color="#003153" Opacity="0.99"></SolidColorBrush>
+                    </StackPanel.Background>
+                </StackPanel>
+            </Border>
+        <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center" Width="500" Height="600">
+            <TextBlock Text="{Binding Nickname}" Style="{StaticResource TextChar}" Margin="0, 20, 0, 0"></TextBlock>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="500" Height="230">
+                <StackPanel Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Left">
+                    <StackPanel Margin="40, 0, 0, 0">
+                        <Border BorderBrush="Azure" BorderThickness="1" Margin="20, 20, 30, 10">
+                            <StackPanel>
+                                <Image Name="ImageCharacter" Source="{Binding ImageCharacter}" Width="100" Height="100" VerticalAlignment="Top" HorizontalAlignment="Left"  Stretch="Uniform"></Image>
+                            </StackPanel>
+                        </Border>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="20, 0, 0, 0">
+                        <TextBlock Text="{Binding Heaven}" Margin="20, 0, 2, 10" Width="150" Style="{StaticResource Text}" TextAlignment="Center"></TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0, -2, 0, -2">
+                        <TextBlock Text="Класс:" Margin="20, 0, 2, 0" Style="{StaticResource Text}"></TextBlock>
+                        <TextBlock Name="Class" Text="{Binding ClassName}" Style="{StaticResource Text}"></TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0, -2, 0, -2">
+                        <TextBlock Text="Уровень:" Margin="20, 0, 2, 0" Style="{StaticResource Text}"></TextBlock>
+                        <TextBlock Name="Level" Text="{Binding Lvl}" Style="{StaticResource Text}"></TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0, -2, 0, -2">
+                        <TextBlock Text="ЖС:" Margin="20, 0, 2, 0" Style="{StaticResource Text}"></TextBlock>
+                        <TextBlock Text="{Binding LifeForce}" Style="{StaticResource Text}"></TextBlock>
+                    </StackPanel>
+                </StackPanel>
+
+                <StackPanel Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="65, 32, 0, 0">
+                    <StackPanel Orientation="Horizontal" Margin="0, -2, 0, -2">
+                        <TextBlock Text="Гильдия:" Margin="20, 2, 2, 2" Style="{StaticResource Text}"></TextBlock>
+                        <TextBlock Text="{Binding Guild}" Style="{StaticResource Text}"></TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0, -2, 0, -2">
+                        <TextBlock Text="Супруг(а):" Margin="20, 2, 2, 2" Style="{StaticResource Text}"></TextBlock>
+                        <TextBlock Text="{Binding Spouse}" Style="{StaticResource Text}"></TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0, -2, 0, -2">
+                        <TextBlock Text="Фракция:" Margin="20, 2, 2, 2" Style="{StaticResource Text}"></TextBlock>
+                        <TextBlock Text="{Binding FractionName}" Style="{StaticResource Text}"></TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0, -2, 0, -2">
+                        <TextBlock Text="Репутация:" Margin="20, 2, 2, 2" Style="{StaticResource Text}"></TextBlock>
+                        <TextBlock Text="{Binding Reputation}" Style="{StaticResource Text}"></TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0, -2, 0, -2">
+                        <TextBlock Text="Статус:" Margin="20, 2, 2, 2" Style="{StaticResource Text}"></TextBlock>
+                        <TextBlock Text="{Binding Status}" Style="{StaticResource Text}"></TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0, -2, 0, -2">
+                        <TextBlock Text="Титул:" Margin="20, 2, 2, 2" Style="{StaticResource Text}"></TextBlock>
+                        <TextBlock Text="{Binding Title}" Style="{StaticResource Text}"></TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0, -2, 0, -2">
+                        <TextBlock Text="Перерождений:" Margin="20, 2, 2, 2" Style="{StaticResource Text}"></TextBlock>
+                        <TextBlock Name="Rebirths" Text="{Binding Rebirths}" Style="{StaticResource Text}"></TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0, -2, 0, -2">
+                        <TextBlock Text="МЭ:" Margin="20, 2, 2, 2" Style="{StaticResource Text}"></TextBlock>
+                        <TextBlock Text="{Binding MagicalEnergy}" Style="{StaticResource Text}"></TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0, -2, 0, -2">
+                        <TextBlock Text="Дух:" Margin="20, 2, 2, 2" Style="{StaticResource Text}"></TextBlock>
+                        <TextBlock Text="{Binding Spirit}" Style="{StaticResource Text}"></TextBlock>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+
+            <Border BorderBrush="Azure" BorderThickness="2, 2, 2, 2" Height="90">
+                <StackPanel Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Left">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Доступно очков характеристик:" Style="{StaticResource Text}" Margin="20, 10, 5, 15"></TextBlock>
+                        <TextBlock Name="PerfPoint" Text="{Binding PerformancePoints}" Style="{StaticResource Text}" Margin="0, 0, 0, 5"></TextBlock>
+                        <StackPanel Orientation="Horizontal" Margin="90, -5, 0, 0">
+                            <Button x:Name="BtnSaveIz" Content="Сохранить изменения" Style="{StaticResource BtnForWindow}" Height="20" Click="BtnSaveIz_Click"></Button>
+                        </StackPanel>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Width="500" Height="90">
+                        <StackPanel Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Left">
+
+                            <StackPanel Orientation="Vertical">
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                                    <TextBlock  Text="Выносливость:" Margin="20, 2, 2, 2" Style="{StaticResource Text}" HorizontalAlignment="Left"></TextBlock>
+                                    <TextBlock Name="Endurance" Text="{Binding Endurance}" Style="{StaticResource Text}" Margin="2, 2, 2, 2" Width="20"></TextBlock>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                                    <TextBlock Text="Сила:" Margin="20, 2, 2, 2" Style="{StaticResource Text}"></TextBlock>
+                                    <TextBlock Name="Power" Text="{Binding Power}" Style="{StaticResource Text}" Margin="2, 2, 2, 2"></TextBlock>
+                                </StackPanel>
+                            </StackPanel>
+
+                        </StackPanel>
+
+                        <StackPanel Orientation="Vertical" Margin="75, 0, 0, 0">
+                            <StackPanel Orientation="Horizontal">
+                                <Button x:Name="BtnPlusEn" Content="+" Style="{StaticResource BtnForWindow}" Width="17" Height="17" Margin="0, 0, 5, 5" Click="BtnPlusEn_Click">
+                                </Button>
+                                <Button x:Name="BtnMinusEn" Content="-" Style="{StaticResource BtnForWindow}" Width="17" Height="17" Margin="0, 0, 5, 5" Click="BtnMinusEn_Click" ></Button>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <Button x:Name="BtnPlusPow" Content="+" Style="{StaticResource BtnForWindow}" Width="17" Height="17" Margin="0, 0, 5, 0" Click="BtnPlusPow_Click">
+                                </Button>
+                                <Button x:Name="BtnMinusPow" Content="-" Style="{StaticResource BtnForWindow}" Width="17" Height="17" Margin="0, 0, 5, 0" Click="BtnMinusPow_Click"></Button>
+                            </StackPanel>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20, 0, 0, 0">
+                            <StackPanel Orientation="Vertical">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="Интеллект:" Margin="2, 2, 2, 2" Style="{StaticResource Text}"></TextBlock>
+                                    <TextBlock Name="Intelligence" Text="{Binding Intelligence}" Style="{StaticResource Text}" Margin="2, 2, 2, 2" Width="20"></TextBlock>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="Ловкость:" Margin="2, 2, 2, 2" Style="{StaticResource Text}"></TextBlock>
+                                    <TextBlock Name="Agility" Text="{Binding Agility}" Style="{StaticResource Text}" Margin="2, 2, 2, 2"></TextBlock>
+                                </StackPanel>
+                            </StackPanel>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Vertical" Margin="75, 0, 0, 0">
+                            <StackPanel Orientation="Horizontal">
+                                <Button x:Name="BtnPlusInt" Content="+" Style="{StaticResource BtnForWindow}" Width="17" Height="17" Margin="0, 0, 5, 5" Click="BtnPlusInt_Click">
+                                </Button>
+                                <Button x:Name="BtnMinushInt" Content="-" Style="{StaticResource BtnForWindow}" Width="17" Height="17" Margin="0, 0, 5, 5" Click="BtnMinushInt_Click"></Button>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <Button x:Name="BtnPlusAg" Content="+" Style="{StaticResource BtnForWindow}" Width="17" Height="17" Margin="0, 0, 5, 0" Click="BtnPlusAg_Click">
+                                </Button>
+                                <Button x:Name="BtnMinusAg" Content="-" Style="{StaticResource BtnForWindow}" Width="17" Height="17" Margin="0, 0, 5, 0" Click="BtnMinusAg_Click"></Button>
+                            </StackPanel>
+                        </StackPanel>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+
+            <StackPanel Orientation="Horizontal">
+                <Border BorderBrush="Azure" BorderThickness="0, 0, 1, 0">
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="250" Height="236">
+                        <StackPanel Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Left">
+                            <StackPanel Orientation="Horizontal" Margin="0, 5, 0, -2">
+                                <TextBlock Text="Физ. атака:" Margin="20, 2, 2, 2" Style="{StaticResource Text}"></TextBlock>
+                                <TextBlock Text="{Binding PhysicalAttack}" Style="{StaticResource Text}"></TextBlock>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="0, -2, 0, -2">
+                                <TextBlock Text="Маг. Атака:" Margin="20, 2, 2, 2" Style="{StaticResource Text}"></TextBlock>
+                                <TextBlock Text="{Binding MagicAttack}" Style="{StaticResource Text}"></TextBlock>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="0, -2, 0, -2">
+                                <TextBlock Text="Шанс крит. удара:" Margin="20, 2, 2, 2" Style="{StaticResource Text}"></TextBlock>
+                                <TextBlock Text="{Binding CriticalStrikeChance}" Style="{StaticResource Text}"></TextBlock>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="0, -2, 0, -2">
+                                <TextBlock Text="Скорость атаки:" Margin="20, 2, 2, 2" Style="{StaticResource Text}"></TextBlock>
+                                <TextBlock Text="{Binding AttackSpeed}" Style="{StaticResource Text}"></TextBlock>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="0, -2, 0, -2">
+                                <TextBlock Text="Меткость:" Margin="20, 2, 2, 2" Style="{StaticResource Text}"></TextBlock>
+                                <TextBlock Text="{Binding Accuracy}" Style="{StaticResource Text}"></TextBlock>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="0, -2, 0, -2">
+                                <TextBlock Text="Показатель атаки:" Margin="20, 2, 2, 2" Style="{StaticResource Text}"></TextBlock>
+                                <TextBlock Text="{Binding IndicatorAttack}" Style="{StaticResource Text}"></TextBlock>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="0, -2, 0, -2">
+                                <TextBlock Text="Боевой дух:" Margin="20, 2, 2, 2" Style="{StaticResource Text}"></TextBlock>
+                                <TextBlock Text="{Binding FightingSpirit}" Style="{StaticResource Text}"></TextBlock>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="0, -2, 0, -2">
+                                <TextBlock Text="Скрытность:" Margin="20, 2, 2, 2" Style="{StaticResource Text}"></TextBlock>
+                                <TextBlock Text="{Binding Stealth}" Style="{StaticResource Text}"></TextBlock>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="0, -2, 0, -2">
+                                <TextBlock Text="Урон монстрам:" Margin="20, 2, 2, 2" Style="{StaticResource Text}"></TextBlock>
+                                <TextBlock Text="{Binding MonsterDamage}" Style="{StaticResource Text}"></TextBlock>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="0, -2, 0, -2">
+                                <TextBlock Text="Физ. пробивание:" Margin="20, 2, 2, 2" Style="{StaticResource Text}"></TextBlock>
+                                <TextBlock Text="{Binding PhysicalPunching}" Style="{StaticResource Text}"></TextBlock>
+                            </StackPanel>
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+                <Border BorderBrush="Azure" BorderThickness="1, 0, 0, 0">
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="250" Height="236">
+                        <StackPanel Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Left">
+                            <StackPanel Orientation="Horizontal" Margin="0, 5, 0, -2">
+                                <TextBlock Text="Физ. защита:" Margin="20, 2, 2, 2" Style="{StaticResource Text}"></TextBlock>
+                                <TextBlock Text="{Binding PhysicalProtection}" Style="{StaticResource Text}"></TextBlock>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="0, -2, 0, -2">
+                                <TextBlock Text="Маг. защита:" Margin="20, 2, 2, 2" Style="{StaticResource Text}"></TextBlock>
+                                <TextBlock Text="{Binding MagicProtection}" Style="{StaticResource Text}"></TextBlock>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="0, -2, 0, -2">
+                                <TextBlock Text="Критический урон:" Margin="20, 2, 2, 2" Style="{StaticResource Text}"></TextBlock>
+                                <TextBlock Text="{Binding CriticalDamage}" Style="{StaticResource Text}"></TextBlock>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="0, -2, 0, -2">
+                                <TextBlock Text="Скорость:" Margin="20, 2, 2, 2" Style="{StaticResource Text}"></TextBlock>
+                                <TextBlock Text="{Binding Speed}" Style="{StaticResource Text}"></TextBlock>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="0, -2, 0, -2">
+                                <TextBlock Text="Уклонение:" Margin="20, 2, 2, 2" Style="{StaticResource Text}"></TextBlock>
+                                <TextBlock Text="{Binding Evasion}" Style="{StaticResource Text}"></TextBlock>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="0, -2, 0, -2">
+                                <TextBlock Text="Показатель защиты:" Margin="20, 2, 2, 2" Style="{StaticResource Text}"></TextBlock>
+                                <TextBlock Text="{Binding IndicatorProtection}" Style="{StaticResource Text}"></TextBlock>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="0, -2, 0, -2">
+                                <TextBlock Text="Сила Духа:" Margin="20, 2, 2, 2" Style="{StaticResource Text}"></TextBlock>
+                                <TextBlock Text="{Binding Fortitude}" Style="{StaticResource Text}"></TextBlock>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="0, -2, 0, -2">
+                                <TextBlock Text="Обнаружение:" Margin="20, 2, 2, 2" Style="{StaticResource Text}"></TextBlock>
+                                <TextBlock Text="{Binding Detection}" Style="{StaticResource Text}"></TextBlock>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="0, -2, 0, -2">
+                                <TextBlock Text="Защита от монстров:" Margin="20, 2, 2, 2" Style="{StaticResource Text}"></TextBlock>
+                                <TextBlock Text="{Binding MonsterProtection}" Style="{StaticResource Text}"></TextBlock>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="0, -2, 0, -2">
+                                <TextBlock Text="Маг. пробивание:" Margin="20, 2, 2, 2" Style="{StaticResource Text}"></TextBlock>
+                                <TextBlock Text="{Binding MagicPunching}" Style="{StaticResource Text}"></TextBlock>
+                            </StackPanel>
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0, 0, 0, 10">
+            <Button Name="BtnSoulChannels" Content="Каналы души" HorizontalAlignment="Right" VerticalAlignment="Bottom" Style="{StaticResource BtnForWindow}" 
+                        Margin="10, 0, 10, 10" Click="BtnEquipment_Click"></Button>
+            <Button Name="BtnToPDF" Content="PDF файл" HorizontalAlignment="Right" VerticalAlignment="Bottom" Style="{StaticResource BtnForWindow}" 
+                        Margin="10, 0, 10, 10" Click="BtnToPDF_Click"></Button>
+        </StackPanel>
+        
+        <Button Name="BtnDelete" Content="Удалить персонажа" HorizontalAlignment="Right" VerticalAlignment="Bottom" Style="{StaticResource BtnForWindow}" 
+                        Margin="20, 20, 20, 60" Click="BtnDelete_Click"></Button>
+
+        <Button Name="BtnBackMP" Content="Назад" HorizontalAlignment="Right" VerticalAlignment="Bottom" Style="{StaticResource BtnForWindow}" 
+                        Margin="20, 20, 20, 20" Click="BtnBackMP_Click"></Button>
+            
+        
+    </Grid>
+</Page>
